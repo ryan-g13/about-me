@@ -6,7 +6,7 @@ body {
     border-width: 10px;
     border-color: rgb(31, 0, 206);
 }
-img {
+#profile {
     border-width: 20px;
     border-color: black;
     padding: 15px;
