@@ -1,8 +1,9 @@
 'use strict';
-
+/* Commenting out first iteration of mic test.
 alert('Is this thing on mate?');
-var userName = prompt('Greetings! What is your name?');
+*/
 
+var userName = prompt('Greetings! What is your name?');
 alert('Hi, ' + userName + ' nice to meet you! I am going to ask you a few questions about me. Please respond with y/n or yes/no.');
 
 var response1 = prompt('Do you think I enjoy riding motorcycles?').toLowerCase().trim();
@@ -58,4 +59,22 @@ if (response5 === 'no' || response5 === 'n') {
   alert('Normally ' + userName + ' you would be right, but I strongly dislike the Patriots so I cheer for the team playing them and the Seahawks.');
 } else {
   alert('You have provided inaccurate input.');
+}
+
+
+//This is questions six about testing a guess against a numeric value.
+var answer = 13;
+var guess = Number(prompt('Hello, welcome to the number guessing portion of the quesitions. I have selected a number between 1 and 20, you have 4 guesses to get it right. What is your first guess?')).trim();
+
+for (var i = 1; i < 5; i++) {
+  if (guess === answer) {
+    alert('Congratulations you guessed correctly! You guessed: ' + answer + ' on your ' + i + ' th guess.');
+    break;
+  } else if (guess > answer) {
+    alert('You have guessed too high with ' + guess + ' this is your ' + i + ' th guess');
+    guess = Number(prompt('Please guess again.')).trim();
+  } else if (guess < answer) {
+    alert('You have guessed too low with ' + guess + ' this is your ' + i + ' th guess');
+    guess = Number(prompt('Please guess again.')).trim();
+  }
 }
