@@ -42,7 +42,7 @@ var response4 = prompt('Fourth question. Are street tacos the best food ever?').
 console.log('Tacos' + response4);
 
 if (response4 === 'yes' || response4 === 'y') {
-  alert('Terribly good guess ' + userName);
+  alert('Terribly good guess ' + userName + 'street tacos are life!');
 } else if (response4 === 'no' || response4 === 'n') {
   alert('Wrong my dear ' + userName + ' , my favorite food is street tacos!');
 } else {
@@ -53,9 +53,9 @@ var response5 = prompt('Last question. Are the Seahawks the only team I cheer fo
 console.log('Sports Team' + response5);
 
 if (response5 === 'no' || response5 === 'n') {
-  alert(userName + ', I cheer for the Seahawks and anyone playing the Patriots!');
+  alert(userName + ', you are correct, I cheer for the Seahawks and anyone playing the Patriots!');
 } else if (response5 === 'yes' || response5 === 'y') {
-  alert('Normally ' + userName + ' you would be right, but I strongly dislike the Patriots so I cheer for the team playing them.');
+  alert('Normally ' + userName + ' you would be right, but I strongly dislike the Patriots so I cheer for the team playing them and the Seahawks.');
 } else {
   alert('You have provided inaccurate input.');
 }

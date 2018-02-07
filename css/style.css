@@ -1,16 +1,30 @@
 * {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);  
 }
 body {
     background-color: aquamarine;
     border-width: 10px;
     border-color: rgb(31, 0, 206);
+    padding: 15px;
 }
 #profile {
     border-width: 20px;
     border-color: black;
-    padding: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
 }
 #Love {
-    color: red;
+  color: red;
+  padding: 15px;
+}
+#biop {
+  font-family: cursive;
+  margin-left: 20px;
+  padding: 15px;
+}
+ul {
+  margin-left: 25px;
+}
+li {
+  padding-left: 100px;
 }
