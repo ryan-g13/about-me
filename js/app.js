@@ -82,7 +82,7 @@ function question6() {
   var guess = Number(prompt('Hello, welcome to the number guessing portion of the quesitions. I have selected a number between 1 and 20, you have 4 guesses to get it right. What is your first guess?'));
   console.log('NumbersGuessing ' + guess);
 
-  for (var i = 1; i < 5; i++) {
+  for (var i = 1; i < 4; i++) { //decreased value to 4 guesses
     if (guess === answer) {
       alert('Congratulations you guessed correctly! You guessed: ' + answer + ' on your ' + i + ' th guess.');
       totalRight += 1;
@@ -93,6 +93,9 @@ function question6() {
     } else if (guess < answer) {
       alert('You have guessed too low with ' + guess + ' this is your ' + i + ' th guess');
       guess = Number(prompt('Please guess again.'));
+    } else{
+      guess = prompt('You provided an incorrect guess please use a number and guess again!');//fixed string input issue
+      i--;
     } console.log('NumbersGuessing ' + guess);
   }
 }
@@ -101,20 +104,22 @@ function question7() {
   var states = ['washington', 'oregon', 'california'];
   var guessStates = prompt('Hello, welcome to the game where you guess which state I have ridden my motorcycle in. You have 6 guesses, please spell out the State name. What is your first guess?').toLowerCase().trim();
   var k = 6;
-  console.log('StatesGuessing ' + guessStates);
 
   while (k > 0) {
-
+    console.log('StatesGuessing ' + guessStates); //moved log inside for debugging
     for (var j = 0; j < states.length; j++) {
       if (guessStates === states[j].toLowerCase()) {
         alert('Congratulations you have guessed correctly! All of the places I have been include ' + states[0] + ', ' + states [1] + ' and ' + states[2] + '.');
-        //totalGuesses += 1;
         console.log('StatesGuessing ' + guessStates);
         break;
       }
     } if (j === 3) { //if it runs through the above loop completely it means its wrong thus below
       guessStates = prompt('You have guessed incorrectly, please guess again!');
       k--;
+      if (k === 1) { //added logic for checking if out of guesses with return to user.
+        alert('You have guessed your last guess, these are the states ' + states[0] + ', ' + states [1] + ' and ' + states[2] + '.');
+        break;
+      }
     } else {
       totalRight += 1;
       break;
